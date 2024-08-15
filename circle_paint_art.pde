@@ -1,7 +1,7 @@
 int STAR_AMOUNT = 200;
 
 color[] COLORS;
-String COLORS_FILE_PATH = "colors/blue-red.json";
+String COLORS_FILE_PATH = "colors/red-yellow.json";
 
 int CONTOUR_MARGIN = 100;
 boolean CONTOUR_ROTATE = true;
@@ -9,13 +9,13 @@ int CONTOUR_MIN_THICKNESS = 10;
 int CONTOUR_MAX_THICKNESS = 20;
 int CONTOUR_MIN_LENGTH = 40;
 int CONTOUR_MAX_LENGTH = 220;
-float CONTOUR_MIN_ANGLE = -QUARTER_PI / 5;
-float CONTOUR_MAX_ANGLE = QUARTER_PI / 5;
+float CONTOUR_MIN_ANGLE = 0; //-QUARTER_PI / 5;
+float CONTOUR_MAX_ANGLE = 0; //QUARTER_PI / 5;
 
 int LINE_MIN_LENGTH = 50;
 int LINE_MAX_LENGTH = 300;
 
-boolean SAVE_IMAGES = true;
+boolean SAVE_IMAGES = false;
 
 int NB_1 = 3;
 int NB_2 = 10;
@@ -24,7 +24,8 @@ int NB_4 = 500;
 int NB_5 = 200;
 
 void setup() {
-  size(1080, 1920);
+  //size(1080, 1920);
+  fullScreen();
   loadColors();
   
   gradientBackground();
